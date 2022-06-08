@@ -1,0 +1,6 @@
+rootProject.name = 'jua'
+include 'cli'
+include 'compiler'
+include 'spec'
+include 'vm'
+

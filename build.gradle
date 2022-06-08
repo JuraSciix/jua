@@ -1,0 +1,11 @@
+subprojects {
+    apply(plugin: 'java')
+
+    group('jua')
+    version('1.0-SNAPSHOT')
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}

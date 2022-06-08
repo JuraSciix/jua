@@ -1,0 +1,19 @@
+plugins {
+    id('me.champeau.jmh').version('0.6.6')
+}
+
+java.sourceCompatibility(JavaVersion.VERSION_1_8)
+java.targetCompatibility(JavaVersion.VERSION_1_8)
+
+dependencies {
+    implementation(project(':compiler'))
+    implementation(project(':spec'))
+    implementation(project(':vm'))
+
+    testImplementation(group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2')
+    testAnnotationProcessor(group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.8.2')
+}
+
+jar {
+    manifest.attributes['Main-Class'] = 'jua.cli.JuaCli'
+}
